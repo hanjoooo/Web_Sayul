@@ -1,15 +1,13 @@
 <?php
-$con = mysqli_connect("localhost", "root", "rlagkswn113");
-if (!$con) {
-  die('Could not connect: ' . mysql_error);
-} else {
-  mysqli_select_db($con,"project" );
-  $sql_display = "SELECT * FROM admin";
-  $result = mysqli_query($con,$sql_display);
-  echo "<table border=’1′> <tr> <th>ID</th> <th>NAME</th> <th>PHONE</th>
-  <th>Update</th> <th>Delete</th></tr>";
+$con = mysql_connect("localhost", "root", "rlagkswn113");
+mysql_select_db($con,"project" );
+$sql_display = "SELECT * FROM admin";
+$result = mysql_query($con,$sql_display);
+echo $result;
+echo "<table border=’1′> <tr> <th>ID</th> <th>NAME</th> <th>PHONE</th>
+<th>Update</th> <th>Delete</th></tr>";
 $n = 1;
-while($row = mysqli_fetch_array($result)){
+while($row = mysql_fetch_assoc($result)){
   $id = $row['id'];
   echo "ss";
 echo "<tr>";
@@ -28,6 +26,5 @@ echo "name : <input type=\"text\" id = \"name\"/> <br>";
 echo "phone : <input type=\"text\" id = \"phone\"/> <br>";
 echo "<input type=\"submit\" value = \"submit\"/>";
 echo "</form>";
-}
 mysqli_close($con);
 ?>
