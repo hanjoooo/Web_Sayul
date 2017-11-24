@@ -1,66 +1,77 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>"Q and A </title>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style> #CONTENTS{ min-height: 1000px; }</style>
+  <style>
+  @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  body{
+    font-family : "Nanum Gothic", sans-serif;
+
+  }
+  table.type04 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+  margin : 20px 10px;
+}
+table.type04 th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+table.type04 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+  </style>
+
+  <script type="text/javascript">
+    function move(url){
+      location.href=url;
+    }
+  </script>
 </head>
 
-<body bgcolor="white">
-  <div class="container" id="CONTENTS">
-    <form id="FRM">
-    <div class="row z-depth-1">
-     <select name="days" style="display: inline-block;" onchange="javascript:selectdays(this)" id="selects">
-       <option value="week" selected="week">일주일</option>
-       <option value="2week" >15일</option>
-       <option value="month" >최근한달</option>
-       <option value="3month" >최근3달</option>
-       <option value="3month" >최근6달</option>
-     </select>
+<body>
 
+  <table class ="type04" width="1300";>
+    <thread>
+      <tr>
+        <th align ="center"scope="row">Title</th>
+        <th align ="center"scope="row">Number</th>
+        <th align ="center" scope="row">Author</th>
+        <th align ="center"scope="row">Date</th>
+        <th align ="center"scope="row">Views</th>
+      </tr>
+    </thread>
+    <tbody>
+      <tr>
+        <td  align="center">71</td>
+        <td ><a href="Community_View.php">[신촌팀]2차여행-관광객 인식조사 캠페인</a></td>
+        <td  align ="center">8기 홍지윤</td>
+        <td  align ="center">2017.11.23</td>
+        <td  align ="center">12</td>
+      </tr>
+      <tr>
+        <td  align="center">13</td>
+        <td ><a href="Question_View.html">[신촌팀]2차 팀여행 회의</a></td>
+        <td  align ="center">7기 김한주</td>
+        <td  align ="center">2016.11.23</td>
+        <td  align ="center">22</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td scope="row" align="center" colspan="5">1</td>
+      </tr>
+    </tfoot>
 
-    <button type="button" onclick="location.href='./contents_frame.php' ">초기화</button>
-  </div>
-    </form>
-  </div>
-
-
-</script>
-<?php
-$con = mysqli_connect("192.168.199.240:3306", "root", "rlagns5345");
-if (!$con) {
-  die('Could not connect: ' . mysql_error);
-} else {
-  mysqli_select_db($con,"project" );
-  $sql_display = "SELECT * FROM admin";
-  $result = mysqli_query($con,$sql_display);
-  echo "<table border=’1′> <tr> <th>ID</th> <th>NAME</th> <th>PHONE</th>
-  <th>Update</th> <th>Delete</th></tr>";
-$n = 1;
-while($row = mysqli_fetch_array($result)){
-  $id = $row['id'];
-  echo "ss";
-echo "<tr>";
-echo "<td>" . $id . "</td>";
-echo "<td>" . $row['passs'] . "</td>";
-echo '<td><a href="./update.php?id='.$id.'">수정</a></td>';
-echo '<td><a href="./delete.php?id='.$id.'">삭제</a></td>';
-
-echo "</tr>";
-$n++;
-}
-echo "</table>";
-echo "<form action =\"insert.php\" method=\"POST\">";
-echo "id : <input type=\"text\" id = \"id\"/> <br>";
-echo "name : <input type=\"text\" id = \"name\"/> <br>";
-echo "phone : <input type=\"text\" id = \"phone\"/> <br>";
-echo "<input type=\"submit\" value = \"submit\"/>";
-echo "</form>";
-}
-mysqli_close($con);
-?>
-
-</body>
+  </body>
 </html>

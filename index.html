@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="ko">
   <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+    </script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,18 +16,19 @@
       }
       #jb-header {
         padding: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 0
+        border: 0px solid #bcbcbc;
       }
       #jb-content {
         padding: 20px;
         margin-bottom: 20px;
         float: left;
-          border: 1px solid #bcbcbc;
+          border: 0px solid #bcbcbc;
       }
       #jb-footer {
         clear: both;
         padding: 20px;
-          border: 1px solid #bcbcbc;
+          border: 0px solid #bcbcbc;
       }
       @media ( max-width: 480px ) {
         #jb-container {
@@ -35,23 +39,48 @@
           width: auto;
         }
       }
+      a{text-decoration:none; color:#000000;}	a:hover{color:#ff0000;}
+         nav ul li {
+            display:inline;                         /*  세로나열을 가로나열로 변경 */
+            font:bold 15px Dotum;                     /* 폰트 설정 - 12px의 돋움체 굵은 글씨로 표시 */
+            padding:0 0 0 40px;
+            font-size:15px;
+            text-align: top;
+        }
+         nav ul li:first-child{border-left:none;}
     </style>
   </head>
   <body>
     <div id="jb-container">
-      <div id="jb-header">
-        <a>
-          <img src="http://sayul.org/xe/files/attach/images/23359/52b691a0132f75f72b15fb26a6068382.png" alt="logo" />
-        </a>
+      <a href="index.html">
+      <img src="logo.png" style="text-align:center; float:left" alt="logo"/>
+      </a>
+      <div id="jb-header" >
+        <nav>
+        <ul>
+
+          <li ><a href="#">인사말</a></li>
+          <li><a href="#">비전</a></li>
+          <li><a href="#">연혁</a></li>
+          <li><a href="#">로고</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">조직도</a></li>
+          <li><a href="#">언론 홍보</a></li>
+        </ul>
+    </nav>
+     </ul>
+
       </div>
       <div id="jb-content">
-        <div class="content_wrap">
+        <div class="content_wrap" >
               <div style="*zoom:1;padding:0px 0px 0px 0px !important;">
-                <div id="camera_wrap_62" class="camera_wrap">
-                  <a href="http://www.sayul.org/xe/s_sayul_01">
-                    <img src="main.png" alt="1.jpg" width="1020" height="500" style="" />
-                  </a>
+                <a href="http://www.sayul.org/xe/s_sayul_05">
+                <div id="camera_wrap_62" class="cycle-slideshow" cycle-slideshow data-cycle-loador="wait" data-cycle-fx=scrollHorz data-cycle-timeout=3000>
+                    <img  src="main.png" alt="1.jpg" width="1020" height="500" style="" />
+                    <img src="main1.jpg" alt="1.jpg" width="1020" height="500" style="" />
+                    <img src="main2.jpg" alt="1.jpg" width="1020" height="500" style="" />
                   </div>
+                </a>
                 </div>
               <div style="padding:0px 0px 0px 0px !important;">
                 <div>
@@ -66,7 +95,7 @@
                             <img src="anam.jpg" alt="2.jpg" width="250" height="250" style="" />
                           </a>
                           <a href="http://www.sayul.org/xe/KN_eng">
-                            <img src="http://sayul.org/xe/files/attach/images/23357/357/023/6409839037d976c7688f76b4bd9ac703.jpg" alt="3.jpg" width="250" height="250" style="" />
+                            <img src="gawnak.jpg" alt="3.jpg" width="250" height="250" style="" />
                           </a>
                           <br/>
                         </p>
@@ -79,9 +108,9 @@
             <div>
                 <div style="padding:0px 0px 0px 0px !important;">
                   <p>
-                      <img src="image.png" alt="3.jpg" width="220" height="70" style="" margin-left="20"/>
-                      <img src="image2.png" alt="3.jpg" width="220" height="70" style="" />
-                      <img src="image3.png" alt="3.jpg" width="220" height="70" style="" />
+                      <img src="image.png" alt="3.jpg" width="220" height="70"  style="padding:0px 0px 0px 40px"/>
+                      <img src="image2.png" alt="3.jpg" width="220" height="70" style="padding:0px 0px 0px 40px" />
+                      <img src="image3.png" alt="3.jpg" width="220" height="70" style="padding:0px 0px 0px 40px" />
                   </p>
                 </div>
             </div>
@@ -89,4 +118,13 @@
       </div>
     </div>
   </body>
+  <div id="bottom">
+
+      <a style="margin-left:20px">문화공공외교단 세이울</a>
+
+			<a class="copyright" style="margin-left:50px">단장: 남석현, 부단장: 박진형, 조현석    |    문의: SAYUL.org@gmail.com    |   © SAYUL All rights reserved</a>
+
+				<a style="margin-left:50px">이용약관</a>
+				<a>개인정보취급방침</a>
+			</div
 </html>
