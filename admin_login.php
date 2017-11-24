@@ -28,28 +28,15 @@ if (!eregi($_SERVER['HTTP_HOST'], $_SERVER['HTTP_REFERER'])) {
 
           if($pass == $row['pass']){
             //관리자 페이지 내용 시작
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+						echo "<frameset rows=\"80,470,45\" cols=\"980\" framespacing=\"0\" frameborder=\"no\" border=\"0\">
+					  	<frame src=\"t_shinchon.html\" frameborder=\"yes\" border=\"1\" scrolling=\"no\" noresize=\"noresize\" marginwidth=\"10\" marginheight=\"15\" name=\"headerFrame\"></frame>
+					  	<frameset cols=\"150,800\" framespacing=\"0\" frameborder = \"no\" border=\"0\" >
+					  		<frame src=\"s_admin.html\" frameborder=\"yes\" border=\"1\" scrolling=\"auto\" noresize=\"noresize\" marginwidth=\"10\" marginheight=\"15\" name=\"naveFrame\" >
+					  		</frame>
+					  		<frame src=\"c_shinchon.php\" frameborder=\"yes\" border=\"1\" scrolling=\"yes\" noresize=\"noresize\" marginwidth=\"0\" marginheight=\"15\" name=\"contentsFrame\"></frame>
+					  	</frameset>
+							<frame src =\"footer_frame.php\" frameborder=\"yes\" border=\"1\" scrolling=\"no\" noresize=\"noresize\" marginwidth=\"0\" marginheight=\"0\" name=\"footerFrame\"></frame>
+						 	<noframes>";
 
           } else {
             echo "비밀번호가 틀렸습니다. <a href=\"admin.php\">돌아가기</a>";
