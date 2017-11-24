@@ -22,7 +22,7 @@ if(!$con){
   $result = mysqli_fetch_array($check);
 
   if($result['COUNT(*)']==0) {
-    if($insname!="" && $insname!=NULL && $insgender!="" && $insgender!=NULL &&$insage!="" && $insage!=NULL &&$insnational!="" && $insnational!=NULL &&$insuniv!="" && $insuniv!=NULL &&$insemail!="" && $insemail!=NULL &&$insphone!="" && $insphone!=NULL &&$insfacebook!="" && $insfacebook!=NULL &&$inskakao!="" && $inskakao!=NULL &&$insfavorite!="" && $insfavorite!=NULL &&$insexpect!="" && $insexpect!=NULL) {
+    if($insname!="" && $insname!=NULL && $insgender!="" && $insgender!=NULL &&$insage!="" && $insage!=NULL &&$insnational!="" && $insnational!=NULL &&$insuniv!="" && $insuniv!=NULL &&$insemail!="" && $insemail!=NULL) {
       echo "done";
       $sql_insert = "INSERT INTO recruit VALUES ('$insname', '$insgender', '$insage', '$insnational', '$insuniv', '$insemail', '$insphone', '$insfacebook', '$inskakao', '$insfavorite', '$insexpect', '$inscomment')";
       mysqli_query($con, $sql_insert);
