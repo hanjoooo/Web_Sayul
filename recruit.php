@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("192.168.194.197", "root", "rlagns5345");
+$con = mysqli_connect("192.168.0.101", "root", "rlagns5345");
 if(!$con){
   die('Could not connect: ' . mysql_error);
 } else {
@@ -17,6 +17,10 @@ if(!$con){
   $insexpect=$_POST['uExpect'];
   $inscomment=$_POST['comment'];
 
+  if(preg_match('/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i',$insemail)) {
+  if(ctype_digit($insage)) {
+  if(strlen($inscomment)<=200) {
+
   $sql_select="SELECT COUNT(*) FROM recruit WHERE email='$insemail'";
   $check = mysqli_query($con, $sql_select);
   $result = mysqli_fetch_array($check);
@@ -32,6 +36,15 @@ if(!$con){
   } else {
     echo "same email exists";
   }
+} else {
+  echo "too much comment";
+}
+} else {
+  echo "age not integer";
+}
+} else {
+  echo "not email";
+}
 }
 mysqli_close($con);
 echo "<li class=\"starttag\">";

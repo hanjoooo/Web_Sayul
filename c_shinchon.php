@@ -7,7 +7,6 @@
   @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
   body{
     font-family : "Nanum Gothic", sans-serif;
-
   }
   table.type04 {
     border-collapse: separate;
@@ -36,6 +35,13 @@ table.type04 td {
     function move(url){
       location.href=url;
     }
+    function go(to_send) {
+      var f=document.cview;
+      f.cvalue.value=to_send;
+      f.action="Community_View.php";
+      f.method="post";
+      f.submit();
+    }
   </script>
 </head>
 
@@ -44,28 +50,38 @@ table.type04 td {
   <table class ="type04" width="1300";>
     <thread>
       <tr>
-        <th align ="center"scope="row">Title</th>
-        <th align ="center"scope="row">Number</th>
+        <th align ="center" scope="row">Title</th>
+        <th align ="center" scope="row">Number</th>
         <th align ="center" scope="row">Author</th>
-        <th align ="center"scope="row">Date</th>
-        <th align ="center"scope="row">Views</th>
+        <th align ="center" scope="row">Date</th>
+        <th align ="center" scope="row">Views</th>
       </tr>
     </thread>
     <tbody>
-      <tr>
-        <td  align="center">71</td>
-        <td ><a href="Community_View.php">[신촌팀]2차여행-관광객 인식조사 캠페인</a></td>
-        <td  align ="center">8기 홍지윤</td>
-        <td  align ="center">2017.11.23</td>
-        <td  align ="center">12</td>
-      </tr>
-      <tr>
-        <td  align="center">13</td>
-        <td ><a href="Question_View.html">[신촌팀]2차 팀여행 회의</a></td>
-        <td  align ="center">7기 김한주</td>
-        <td  align ="center">2016.11.23</td>
-        <td  align ="center">22</td>
-      </tr>
+      <?php
+        $con = mysqli_connect("192.168.0.101", "root", "rlagns5345");
+        if(!$con){
+          die('Could not connect: ' . mysqli_error);
+        } else {
+          mysqli_select_db($con, "project");
+          $sql_display = "SELECT * FROM community";
+
+          $result = mysqli_query($con, $sql_display);
+
+          echo "<form name=\"cview\">";
+          echo "<input type=\"hidden\" name=\"cvalue\"/>";
+          while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+            echo "<td  align=\"center\">".$row['number']."</td>";
+            echo "<td ><a href=\"javascript:go('".$row['number']."');\">".$row['title']."</a></td>";
+            echo "<td  align =\"center\">".$row['writer']."</td>";
+            echo "<td  align =\"center\">".$row['date']."</td>";
+            echo "</tr>";
+          }
+          echo "</form>";
+        }
+        mysqli_close($con);
+      ?>
     </tbody>
     <tfoot>
       <tr>
