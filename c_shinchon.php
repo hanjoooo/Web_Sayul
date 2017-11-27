@@ -49,20 +49,17 @@ table.type04 td {
   <table class ="type04" width="800";>
     <thread>
       <tr>
-<<<<<<< HEAD
+
         <th align ="center"scope="row" >Number</th>
         <th align ="center"scope="row" >Title</th>
-=======
-        <th align ="center" scope="row">Title</th>
-        <th align ="center" scope="row">Number</th>
->>>>>>> 36764865fe268a30200ac5bc0d6986530c29880c
+
         <th align ="center" scope="row">Author</th>
         <th align ="center" scope="row">Date</th>
         <th align ="center" scope="row">Views</th>
       </tr>
     </thread>
     <tbody>
-<<<<<<< HEAD
+
       <tr>
         <td width="10%" align="center">71</td>
         <td width="50%" ><a href="Community_View.php">[신촌팀]2차여행-관광객 인식조사 캠페인</a></td>
@@ -77,7 +74,7 @@ table.type04 td {
         <td  align ="center">2016.11.23</td>
         <td  align ="center">22</td>
       </tr>
-=======
+
       <?php
         $con = mysqli_connect("192.168.0.101", "root", "rlagns5345");
         if(!$con){
@@ -102,7 +99,6 @@ table.type04 td {
         }
         mysqli_close($con);
       ?>
->>>>>>> 36764865fe268a30200ac5bc0d6986530c29880c
     </tbody>
     <tfoot>
       <tr>
