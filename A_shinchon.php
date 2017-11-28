@@ -69,26 +69,23 @@
 					<thread>
 						<tr>
 							<th align ="center"scope="row" >Number</th>
-							<th align ="center"scope="row" >Title</th>
+							<th align ="center"scope="row" >Comment</th>
 							<th align ="center" scope="row">Author</th>
 							<th align ="center"scope="row">Date</th>
-							<th align ="center"scope="row">Views</th>
 						</tr>
 					</thread>
 					<tbody>
 						<tr>
 							<td width="10%" align="center">3</td>
-							<td width="50%" ><a href="Community_View.php">I want to go seoul tower</a></td>
+							<td width="50%" >I want to go seoul tower</td>
 							<td width="15%"  align ="center">huhu</td>
 							<td width="15%"  align ="center">2017.11.27</td>
-							<td width="10%"  align ="center">12</td>
 						</tr>
 						<tr>
 							<td  align="center">13</td>
-							<td ><a href="Question_View.html">How about go to busan</a></td>
+							<td >How about go to busan</td>
 							<td  align ="center">top</td>
 							<td  align ="center">2017.11.23</td>
-							<td  align ="center">1</td>
 						</tr>
 					</tbody>
 					<tfoot>
@@ -99,7 +96,7 @@
 					</tfoot>
 				</table>
 				<table width="800";>
-					<input type="button" value="Write" onclick="move('Vote.php');"/>
+					<input type="button" value="Write" onclick="move('A_Comment.php');"/>
 				</table>
 
   </body>
