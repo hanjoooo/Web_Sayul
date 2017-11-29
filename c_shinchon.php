@@ -75,30 +75,6 @@ table.type04 td {
         <td  align ="center">22</td>
       </tr>
 
-      <?php
-        $con = mysqli_connect("192.168.0.101", "root", "rlagns5345");
-        if(!$con){
-          die('Could not connect: ' . mysqli_error);
-        } else {
-          mysqli_select_db($con, "project");
-          $sql_display = "SELECT * FROM community";
-
-          $result = mysqli_query($con, $sql_display);
-
-          echo "<form name=\"cview\">";
-          echo "<input type=\"hidden\" name=\"cvalue\"/>";
-          while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-            echo "<td  align=\"center\">".$row['number']."</td>";
-            echo "<td ><a href=\"javascript:go('".$row['number']."');\">".$row['title']."</a></td>";
-            echo "<td  align =\"center\">".$row['writer']."</td>";
-            echo "<td  align =\"center\">".$row['date']."</td>";
-            echo "</tr>";
-          }
-          echo "</form>";
-        }
-        mysqli_close($con);
-      ?>
     </tbody>
     <tfoot>
       <tr>

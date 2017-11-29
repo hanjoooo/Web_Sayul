@@ -20,8 +20,7 @@ function move(url) {
 <input type="radio" value="d" onClick="Engine(1, this.value)">Lotte Tower<br>
 <input type="radio" value="d" onClick="Engine(1, this.value)">Demilitarized zone<p>
 <b>2. Why choose this place?</b><p>
-	<textarea name=content rows=5 cols=70>
-	</textarea><br><p>
+	<textarea name=content rows=5 cols=70></textarea><br><p>
 
 <input type="button" onClick="move('A_shinchon.php');" value="Confirm" style="float:left">
 </FORM>

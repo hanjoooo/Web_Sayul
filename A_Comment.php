@@ -40,9 +40,8 @@ body {
 			<td ><input type=text name=name size=10 maxlength=8></td>
     	</tr>
 		<tr>
-			<td width=10% align="center">Contents</td>
-			<td><textarea name=content rows=10 cols=70>
-		</textarea></td>
+			<td width=10% align="center">Comments</td>
+			<td><textarea name=content rows=10 cols=70></textarea></td>
 		</tr>
 
 			<td colspan=2><hr size=2></td>

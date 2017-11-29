@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -77,7 +76,7 @@ table.type04 td {
 
 </body>
 </html>
-=======
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -158,7 +157,7 @@ table.type04 td {
 		<td align=center colspan=2>
 		<hr size=1>
 		<div align="center">
-		<input type="button" value="Add Comments" onclick="move('Question_Reply.html');"> 
+		<input type="button" value="Add Comments" onclick="move('Question_Reply.html');">
 		<input type="button" value="Back" onclick="move('Question_Delete.html');"><br>
 		</div>
 		</td>
@@ -167,4 +166,3 @@ table.type04 td {
 
 </body>
 </html>
->>>>>>> 36764865fe268a30200ac5bc0d6986530c29880c
