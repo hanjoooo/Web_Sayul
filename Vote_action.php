@@ -16,36 +16,39 @@ if(!$con){
   $go3=$_POST['c'];
   $go4=$_POST['d'];
   $go5=$_POST['e'];
-  echo $go1;
 
   if($go1)
   {
-    if(mysqli_query($con, $sql_update1)) echo "1";
-  	else echo mysqli_error($con);
+    mysqli_query($con, $sql_update1);
   }
   if($go2)
   {
-  	if(mysqli_query($con, $sql_update2)) echo "2";
-  	else echo mysqli_error($con);
+  	mysqli_query($con, $sql_update2);
   }
   if($go3)
   {
-  	if(mysqli_query($con, $sql_update3)) echo "3";
-  	else echo mysqli_error($con);
+  	mysqli_query($con, $sql_update3);
   }
   if($go4)
   {
-  	if(mysqli_query($con, $sql_update4)) echo "4";
-  	else echo mysqli_error($con);
+    mysqli_query($con, $sql_update4);
   }
   if($go5)
   {
-  	if(mysqli_query($con, $sql_update5)) echo "5";
-  	else echo mysqli_error($con);
+  	mysqli_query($con, $sql_update5);
   }
 }
 mysqli_close($con);
-echo "<li class=\"starttag\">";
-echo "<a href=\"A_shinchon.php\">back</a>";
-echo "</li>";
 ?>
+<html>
+ <head>
+ <title>..</title>
+ <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+ <script language="JavaScript">
+ function nextWin()
+ {location = "A_shinchon.php"}
+ </script>
+ </head>
+ <body onLoad="setTimeout('nextWin()', 1000)"/> <!--1000 이 1초 입니다.-->
+</html>
+

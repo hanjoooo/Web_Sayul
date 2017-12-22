@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>"Q and A </title>
+  <title>"QnA </title>
 
   <style>
   @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
@@ -50,11 +50,10 @@ table.type04 td {
   <table class ="type04" width="1300";>
     <thread>
       <tr>
-        <th align ="center" scope="row">Title</th>
         <th align ="center" scope="row">Number</th>
+        <th align ="center" scope="row">Title</th>
         <th align ="center" scope="row">Author</th>
         <th align ="center" scope="row">Date</th>
-        <th align ="center" scope="row">Views</th>
       </tr>
     </thread>
     <tbody>

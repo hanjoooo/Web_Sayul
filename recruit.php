@@ -27,27 +27,25 @@ if(!$con){
 
   if($result['COUNT(*)']==0) {
     if($insname!="" && $insname!=NULL && $insgender!="" && $insgender!=NULL &&$insage!="" && $insage!=NULL &&$insnational!="" && $insnational!=NULL &&$insuniv!="" && $insuniv!=NULL &&$insemail!="" && $insemail!=NULL) {
-      $sql_insert = "INSERT INTO recruit VALUES ('$insname', '$insgender', '$insage', '$insnational', '$insuniv', '$insemail', '$insphone', '$insfacebook', '$inskakao', '$insfavorite', '$insexpect', '$inscomment')";
-      if(mysqli_query($con, $sql_insert)) echo "done";
-      else echo mysqli_error($con);
-    } else {
-      echo "something is missing";
+      $sql_insert = "INSERT INTO recruit VALUES ('$insname', '$insgender', '$insage', '$insnational', '$insuniv', '$insemail', '$insphone', '$insfacebook', '$inskakao', '$insfavorite', '$insexpect', '$inscomment', false)";
+      mysqli_query($con, $sql_insert);
     } 
-  } else {
-    echo "same email exists";
-  }
-} else {
-  echo "too much comment";
-}
-} else {
-  echo "age not integer";
-}
-} else {
-  echo "not email";
-}
+  } 
+} 
+} 
+} 
 }
 mysqli_close($con);
-echo "<li class=\"starttag\">";
-echo "<a href=\"recruit.html\">back</a>";
-echo "</li>";
 ?>
+<html>
+ <head>
+ <title>..</title>
+ <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+ <script language="JavaScript">
+ function nextWin()
+ {location = "recruit.html"}
+ </script>
+ </head>
+ <body onLoad="setTimeout('nextWin()', 1000)"/> <!--1000 이 1초 입니다.-->
+</html>
+

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>글 삭제하기</title>
+<title>Erase question</title>
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body {
@@ -23,7 +23,7 @@ body {
 	<table width="50%" cellspacing="0" cellpadding="3">
  		<tr>
 			<td bgcolor="#dcdcdc" height="21" align="center">
-			작성자의 비밀번호를 입력해 주세요.</td>
+			enter question's password!</td>
 		</tr>
 	</table>
 
@@ -43,9 +43,9 @@ body {
 	</tr>
     <tr>
 		<td align="center">
-		<input type="submit" value="삭제" />
+		<input type="submit" value="erase" />
 		
-		<input type="hidden" value="뒤로" />
+		<input type="hidden" value="back" />
 		</td>
 	</tr>
 	</table>

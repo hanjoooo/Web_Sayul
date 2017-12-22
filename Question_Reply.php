@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>답변</title>
+<title>Question Reply</title>
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body {
@@ -43,7 +43,7 @@ body {
 			<td><textarea name="content" rows="10" cols="70"></textarea></td>
 		</tr>
 		<tr>
-			<td width="10%" align="center">Passward</td>
+			<td width="10%" align="center">Password</td>
 			<td width="70%" ><input type="password" name="password" size="15" maxlength="15"></td>
 		    </tr>
 		<tr>

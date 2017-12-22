@@ -78,8 +78,7 @@ table.type04 td {
 		<td align=center colspan=2>
 		<hr size=1>
 		<div align="center">
-		<input type="button" value="Add Comments" onclick="move('Question_Reply.html');"> 
-		<input type="button" value="Back" onclick="move('Question_Delete.html');"><br>
+		<input type="button" value="Back" onclick="move('c_shinchon.php');"><br>
 		</div>
 		</td>
 	</tr>

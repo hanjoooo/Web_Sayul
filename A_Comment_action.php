@@ -13,20 +13,22 @@ if(!$con){
       date_default_timezone_set("Asia/Seoul");
 	  	$insdate=date("y-m-d");
 	  	$sql_insert = "INSERT INTO tripcomment(text, author, date) VALUES ('$inscontent', '$insname', '$insdate')";
-	  	if(mysqli_query($con, $sql_insert)) echo "done";
-	  	else echo mysqli_error($con);
-	  } else {
-	  	echo "nothing";
+	  	mysqli_query($con, $sql_insert);
 	  }
-  } else {
-  	echo "too much content";
   }
-  } else {
-  	echo "too much name";
-  }
+  } 
 }
 mysqli_close($con);
-echo "<li class=\"starttag\">";
-echo "<a href=\"A_shinchon.php\">back</a>";
-echo "</li>";
 ?>
+<html>
+ <head>
+ <title>..</title>
+ <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+ <script language="JavaScript">
+ function nextWin()
+ {location = "A_shinchon.php"}
+ </script>
+ </head>
+ <body onLoad="setTimeout('nextWin()', 1000)"/> <!--1000 이 1초 입니다.-->
+</html>
+
